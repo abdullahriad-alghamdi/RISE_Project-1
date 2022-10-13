@@ -1,0 +1,75 @@
+/*
+        --------------------
+           Table of content
+        --------------------
+        - Global Style
+        - layout Container
+
+            # HomePage layout 
+  
+              1- Header
+                 1.1- navigation bar
+      
+              2- content-Sections
+                 2.1- Main-content(postcard)
+                 2.2- Side-bar(Subscribe form)
+      
+              3- Footer
+                 3.1- social Accounts
+                 3.2- credits
+           
+             ---------- Home Page visualization 3 * 4 ---------- 
+            Header        Header        Header        Header
+            Main-content  Main-content    .           Side-bar 
+            Footer        Footer        Footer        Footer
+            --------------------------------------------------
+
+        */
+
+Body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 8px solid rgb(255, 208, 0);
+    height: 100vh;
+}
+
+:root {
+    --blue: ( rgb(0, 94, 255));
+}
+
+
+/* ---------- #HomePage layout ---------- */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 0.03fr 0.9fr;
+    grid-template-rows: 0.4fr 3.7fr 1.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "header header header header" "main-content main-content . side-bar" "footer footer footer footer";
+    height: 100%;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main-content {
+    grid-area: main-content;
+}
+
+.side-bar {
+    grid-area: side-bar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.header,
+.main-content,
+.side-bar,
+.footer {
+    border: 2px solid red;
+}
