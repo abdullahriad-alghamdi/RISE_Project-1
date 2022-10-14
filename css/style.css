@@ -86,6 +86,18 @@ body {
     grid-area: newsletter;
 }
 
+@media (min-width:769px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1025px) {
+    body {
+        font-size: 30px;
+    }
+}
+
 
 /* --------------------end of this section--------------------------- */
 
