@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog-Homepage</title>
+    <link rel="stylesheet" href="Icons\icons.css">
     <link rel="stylesheet" href="css\style.css">
+
 </head>
 
 <body>
@@ -14,23 +16,116 @@
     <div class="container">
         <!-- Header container -->
         <header class="header">
+
             <!-- navigation bar -->
-            navigation bar
+            <nav class="nav-container">
+                <h1><span class="icon-rocket"><span class="logo-style">TechDays</span></span>
+                </h1>
+                <hr>
+                <ul class="mnue-list">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <a href="DesignSystem.html">
+                        <li>
+                            <span class="icon-link"><span class="mnue-text-style">Design System</span></span>
+                    </a>
+                    </li>
+                    <li>
+
+                        <a href="https://github.com/xlizro/RISE_Project-1"><span class="icon-github"><span class="mnue-text-style">Github Repository</span></span></a>
+                    </li>
+                </ul>
+
+            </nav>
         </header>
+        <!----------------------end of this section----------------------------->
+
         <!-- content-Sections -->
         <section class="main-content">
             <!-- Main-content(posts cards) -->
-            Main-content
+            <ul class="postcard-container">
+                <li class="card-box card-box1">
+                    <img class="postcard-img" src="img\Verevolf.jpg" alt="Verevolf">
+                    <div class="post-card-info">
+                        <h2>Verevolf</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing quis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo harum exercitationem laboriosam nostrum deleniti ipsum eius error voluptatum, nihil architecto.</p>
+                        <a href="post-page.html">Continue reading</a>
+                    </div>
+                </li>
+
+                <li class="card-box card-box2">
+                    <img class="postcard-img" src="img\Hover Effects.jpg" alt="CSS Link Hover Effects">
+                    <div class="post-card-info">
+                        <h2>6 Creative Ideas for CSS Link Hover Effects</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing quis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo harum exercitationem laboriosam nostrum deleniti ipsum eius error voluptatum, nihil architecto.</p>
+
+                        <a href="post-page.html">Continue reading</a>
+                    </div>
+                </li>
+                <li class="card-box card-box3">
+                    <img class="postcard-img" src="img\hyperlinks blue.jpg" alt="hyperlinks blue">
+                    <div class="post-card-info">
+                        <h2>Why are hyperlinks blue?</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing quis Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo harum exercitationem laboriosam nostrum deleniti ipsum eius error voluptatum, nihil architecto.</p>
+                        <a href="post-page.html">Continue reading</a>
+                    </div>
+                </li>
+            </ul>
         </section>
-        <section class="side-bar">
-            <!-- Side-bar(Subscribe form + Ads) -->
-            Side-bar
+        <!----------------------end of this section----------------------------->
+
+        <section class="newsletter">
+            <form>
+                <div class="newsletter-container">
+                    <center>
+                        <h3>Subscribe to our Newsletter</h3>
+                    </center>
+                </div>
+
+                <div class="newsletter-container news-background">
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="text" placeholder="Email address" name="mail" required>
+                    <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                  </label>
+                </div>
+
+                <div class="newsletter-container">
+                    <input type="submit" value="Subscribe">
+                </div>
+            </form>
         </section>
+        <!----------------------end of this section----------------------------->
+
         <!-- footer-container -->
         <footer class="footer">
-            <!-- Footer -->
-            Footer
+            <!-- Social media & Credits -->
+            <ul class="social-media">
+                <li>
+                    <a href="https://twitter.com/xlizro"><Span class="icon-twitter"><span class="icon-twitter-with-circle"></span></Span></a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/xlizro/"><span class="icon-instagram-with-circle"></span></a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/abdullah-alghamdi067"><span class="icon-linkedin-with-circle"></span></a>
+                    <hr>
+                </li>
+            </ul>
+            <br/>
+            <h1>
+                <span class="icon-rocket"><span class="logo-style">TechDays</span></span>
+            </h1>
+            <br/>
+            <p class="credit">
+                Copyrights <span>2022</span> | all rights reserved!
+            </p>
         </footer>
+        <!----------------------end of this section----------------------------->
+
     </div>
 </body>
 

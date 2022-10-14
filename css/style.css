@@ -2,52 +2,71 @@
         --------------------
            Table of content
         --------------------
-        - Global Style
-        - layout Container
+        1- Global Style
+        2- HomePage Grid layout Container
 
-            # HomePage layout 
-  
-              1- Header
-                 1.1- navigation bar
-      
-              2- content-Sections
-                 2.1- Main-content(postcard)
-                 2.2- Side-bar(Subscribe form)
-      
-              3- Footer
-                 3.1- social Accounts
-                 3.2- credits
-           
-             ---------- Home Page visualization 3 * 4 ---------- 
-            Header        Header        Header        Header
-            Main-content  Main-content    .           Side-bar 
-            Footer        Footer        Footer        Footer
-            --------------------------------------------------
+              2.1- content-Sections
+                 2.1.1- Main-content(postcard)
+                 2.1.2- Side-bar (newsletter)
+
+             ########### Home Page visualization #############
+             All SCREENS
+
+             ------------------ Header -----------------------
+             ------------------ Main-content -----------------
+             ------------------ Side-bar ---------------------
+             ------------------ Footer -----------------------
+
+##### You can search by number or name #####
 
         */
 
-Body {
+
+/* ----------------------------------------------------------------------------- */
+
+
+/*--  1- Global Style --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url("Header-Footer.css");
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border: 8px solid rgb(255, 208, 0);
-    height: 100vh;
 }
 
 :root {
-    --blue: ( rgb(0, 94, 255));
+    --blue: #216bb4;
+    --green: rgb(96, 235, 53);
+    --white: white;
+    --black: black;
+    --lighterBlack: rgb(40, 40, 40);
+    --transparentBlack: rgba(0, 0, 0, 0.07);
+    --gray: gray;
 }
 
 
-/* ---------- #HomePage layout ---------- */
+/* --------------------end of this section--------------------------- */
+
+
+/* ---------- 2- HomePage Grid layout ---------- */
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1.1fr 0.03fr 0.9fr;
-    grid-template-rows: 0.4fr 3.7fr 1.4fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 3.6fr 2fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: "header header header header" "main-content main-content . side-bar" "footer footer footer footer";
+    grid-template-areas: "header" "main-content" "newsletter" "footer";
     height: 100%;
 }
 
@@ -59,17 +78,115 @@ Body {
     grid-area: main-content;
 }
 
-.side-bar {
-    grid-area: side-bar;
-}
-
 .footer {
     grid-area: footer;
 }
 
-.header,
-.main-content,
-.side-bar,
-.footer {
-    border: 2px solid red;
+.newsletter {
+    grid-area: newsletter;
 }
+
+
+/* --------------------end of this section--------------------------- */
+
+
+/*-- 2.1.1- Main-content(postcard) --*/
+
+.postcard-container {
+    display: flex;
+    list-style: none;
+    flex-flow: column wrap;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+}
+
+.card-box {
+    flex: 1 1 200px;
+    border: 3px solid var(--gray);
+    box-shadow: 1px 1px var(--black);
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    width: 80%;
+    font-family: 'Patua One', cursive;
+    background-color: rgb(228, 228, 227);
+    gap: 2rem;
+}
+
+.postcard-img {
+    width: 100%;
+    height: auto;
+}
+
+.post-card-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin-left: 20px;
+    gap: 2rem;
+    font-size: 1em;
+}
+
+.post-card-info a {
+    border: 2px solid rgb(157, 157, 157);
+    border-radius: 50px;
+    background-color: white;
+    padding: 10px;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.post-card-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* --------------------end of this section--------------------------- */
+
+
+/* -- 2.1.2 Side-bar (newsletter form)-- */
+
+form {
+    font-family: Arial;
+    margin: 30px auto 30px auto;
+}
+
+.newsletter-container {
+    padding: 20px;
+    background-color: var(--transparentBlack);
+}
+
+.news-background {
+    background-color: var(--white);
+}
+
+input[type=text],
+input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline;
+    box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    margin-top: 15px;
+}
+
+input[type=submit] {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 1em;
+    border: none;
+}
+
+input[type=submit]:hover {
+    opacity: 0.9;
+}
+
+
+/* --------------------end of this section--------------------------- */

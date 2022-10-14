@@ -1,0 +1,48 @@
+/*
+        --------------------
+           Table of content
+        --------------------
+        1- Post Page & Design System layout Container
+  
+
+           
+             ########### Post Page & Design System visualization #############
+
+             ALL SCREENS 
+             ------------------ Header -----------------------
+             ------------------ main-content ------------
+             ------------------ Footer -----------------------
+            
+
+        */
+
+
+/* ----------------------------------------------------------------------------- */
+
+
+/* ---------- 1- PostPage & Design System Grid layout ---------- */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 3.7fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "post-header" "post-main-content" "post-footer";
+    height: 100%;
+}
+
+.post-header {
+    grid-area: post-header;
+}
+
+.post-main-content {
+    grid-area: post-main-content;
+}
+
+.post-footer {
+    grid-area: post-footer;
+}
+
+
+/* --------------------end of this section--------------------------- */
