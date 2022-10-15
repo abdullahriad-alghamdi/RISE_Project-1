@@ -5,7 +5,7 @@
    -the blog HomePage
      - Posts card
      - Subscibe form
-     - Ads space
    -an example Blog Post
-     - article
+     - article 
+     - related articles 
      - info about writer
