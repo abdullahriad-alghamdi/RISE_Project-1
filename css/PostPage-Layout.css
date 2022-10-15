@@ -1,8 +1,9 @@
-/*
+    /*
         --------------------
            Table of content
         --------------------
         1- Post Page & Design System layout Container
+        2- Post page content 
   
 
            
@@ -15,34 +16,212 @@
             
 
         */
-
-
-/* ----------------------------------------------------------------------------- */
-
-
-/* ---------- 1- PostPage & Design System Grid layout ---------- */
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 3.7fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "post-header" "post-main-content" "post-footer";
-    height: 100%;
-}
-
-.post-header {
-    grid-area: post-header;
-}
-
-.post-main-content {
-    grid-area: post-main-content;
-}
-
-.post-footer {
-    grid-area: post-footer;
-}
-
-
-/* --------------------end of this section--------------------------- */
+    /* ----------------------------------------------------------------------------- */
+    /* ---------- 1- PostPage & Design System Grid layout ---------- */
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 3.7fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "post-page-header" "post-page-content" "post-page-footer";
+        height: 100%;
+    }
+    
+    .post-page-header {
+        grid-area: post-page-header;
+    }
+    
+    .post-page-content {
+        grid-area: post-page-content;
+    }
+    
+    .post-page-footer {
+        grid-area: post-page-footer;
+    }
+    /* --------------------end of this section--------------------------- */
+    /* ------------------ 2- Post page container ------------ */
+    
+    .post-page-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 0.2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "post-container" "related-articles";
+    }
+    
+    .post-container {
+        grid-area: post-container;
+    }
+    
+    .related-articles {
+        grid-area: related-articles;
+    }
+    
+    @media (max-width:767px) {
+        .author-container {
+            border: 2px solid #032;
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+        }
+        .article-content {
+            font-size: 30px;
+        }
+        .article-content h1 {
+            font-size: 30px;
+        }
+    }
+    
+    @media (min-width:768px) {
+        .author-social-media {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            font-size: 20px;
+            gap: 3px;
+        }
+        .post-container {
+            display: flex;
+            flex-flow: column;
+            gap: 5px;
+        }
+        .author-container {
+            border-top: 2px solid #5e5e5e;
+            border-bottom: 2px solid #5e5e5e;
+            display: flex;
+            padding: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+        }
+        figure img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    /* -- social-media accounts icons-- */
+    
+    .icon-twitter-with-circle {
+        color: #0ace;
+    }
+    
+    .icon-instagram-with-circle {
+        color: #f09533c7;
+    }
+    
+    .icon-linkedin-with-circle {
+        color: #0072b1;
+    }
+    
+    .post-page-content .author-social-media a {
+        text-decoration: solid;
+    }
+    /* --------------------end of this section--------------------------- */
+    
+    .author-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .author-avatar {
+        width: 50px;
+        height: auto;
+    }
+    
+    .author-avatar img {
+        width: 100%;
+        border-radius: 100%;
+    }
+    
+    .author-name {
+        font-size: 18px;
+        font-weight: bolder;
+        color: #cf4b22;
+    }
+    
+    .author-bio {
+        font-size: 12px;
+        font-weight: lighter;
+        color: gray;
+    }
+    
+    .article-container {
+        margin: 30px;
+        border: 2px solid #5e5e5e;
+    }
+    
+    figure {
+        text-align: center;
+    }
+    
+    .article-container {
+        padding: 30px;
+    }
+    
+    .article-container h1 {
+        font-size: 3rem;
+    }
+    
+    .article-content {
+        text-align: justify;
+        font-weight: 500;
+    }
+    
+    .related-articles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: circle;
+        margin: auto;
+        gap: 10px;
+        padding: 50px;
+        margin-bottom: 30px;
+        box-shadow: 0px 2px 10px 0px rgba(94, 94, 94, 1);
+    }
+    
+    .related-articles:hover {
+        box-shadow: 1px 2px 20px 0px rgba(94, 94, 94, 1);
+        transition: all;
+    }
+    
+    .related-articles-list {
+        text-transform: uppercase;
+        list-style: none;
+        line-height: 40px;
+    }
+    
+    .related-articles-list a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .related-articles-list a:hover {
+        color: rgb(0, 81, 255);
+        text-decoration: dashed;
+    }
+    
+    article p {
+        padding-bottom: 5px;
+    }
+    
+    blockquote {
+        font-weight: bolder;
+        text-align: center;
+        border: 1px;
+        margin-top: 50px;
+        border-top: 1px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 5px outset #5E5E5E;
+        border-left: 5px outset #5E5E5E;
+        background-color: rgb(84, 120, 92);
+        color: rgb(255, 255, 255);
+    }
+    /* --------------------end of this section--------------------------- */

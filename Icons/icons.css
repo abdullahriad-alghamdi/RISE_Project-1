@@ -25,19 +25,16 @@
 .icon-linkedin-with-circle:before {
     content: "\e909";
     font-size: 2em;
-    color: #fff;
 }
 
 .icon-twitter-with-circle:before {
     content: "\e904";
     font-size: 2em;
-    color: #fff;
 }
 
 .icon-instagram-with-circle:before {
     content: "\e907";
     font-size: 2em;
-    color: #fff;
 }
 
 .icon-expand_more:before {
@@ -82,4 +79,8 @@
     color: #1572b6;
     font-weight: bolder;
     margin-right: 10px;
+}
+
+.container {
+    display: flex;
 }
