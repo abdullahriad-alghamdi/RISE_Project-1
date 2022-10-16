@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/61493052/196038074-cc729ac5-78ae-4ebc-970a-1a4c179ca319.png)
+
 # RISE_Project-1
  Responsive Blog site In HTML & CSS
 
