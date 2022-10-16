@@ -19,7 +19,7 @@
     /* ----------------------------------------------------------------------------- */
     /* ---------- 1- PostPage & Design System Grid layout ---------- */
     
-    .container {
+    .post-page-container {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 0.6fr 3.7fr 1fr;
@@ -59,53 +59,7 @@
     .related-articles {
         grid-area: related-articles;
     }
-    
-    @media (max-width:767px) {
-        .author-container {
-            border: 2px solid #032;
-            display: flex;
-            padding: 20px;
-            justify-content: space-around;
-            align-items: center;
-            gap: 20px;
-        }
-        .article-content {
-            font-size: 30px;
-        }
-        .article-content h1 {
-            font-size: 30px;
-        }
-    }
-    
-    @media (min-width:768px) {
-        .author-social-media {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-end;
-            font-size: 20px;
-            gap: 3px;
-        }
-        .post-container {
-            display: flex;
-            flex-flow: column;
-            gap: 5px;
-        }
-        .author-container {
-            border-top: 2px solid #5e5e5e;
-            border-bottom: 2px solid #5e5e5e;
-            display: flex;
-            padding: 20px;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 20px;
-        }
-        figure img {
-            width: 100%;
-            height: auto;
-        }
-    }
+    /* --------------------end of this section--------------------------- */
     /* -- social-media accounts icons-- */
     
     .icon-twitter-with-circle {
@@ -157,22 +111,14 @@
         border: 2px solid #5e5e5e;
     }
     
-    figure {
-        text-align: center;
-    }
-    
     .article-container {
         padding: 30px;
     }
     
     .article-container h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
-    
-    .article-content {
-        text-align: justify;
-        font-weight: 500;
-    }
+    /* --------------------end of this section--------------------------- */
     
     .related-articles {
         display: flex;
@@ -185,6 +131,7 @@
         padding: 50px;
         margin-bottom: 30px;
         box-shadow: 0px 2px 10px 0px rgba(94, 94, 94, 1);
+        border-radius: 10px;
     }
     
     .related-articles:hover {
@@ -193,8 +140,10 @@
     }
     
     .related-articles-list {
-        text-transform: uppercase;
-        list-style: none;
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-family: 'Patua One', cursive;
+        list-style: square;
         line-height: 40px;
     }
     
@@ -207,12 +156,13 @@
         color: rgb(0, 81, 255);
         text-decoration: dashed;
     }
+    /* --------------------end of this section--------------------------- */
     
     article p {
         padding-bottom: 5px;
     }
     
-    blockquote {
+    .todayquote {
         font-weight: bolder;
         text-align: center;
         border: 1px;
@@ -223,5 +173,23 @@
         border-left: 5px outset #5E5E5E;
         background-color: rgb(84, 120, 92);
         color: rgb(255, 255, 255);
+    }
+    
+    .blockquote {
+        font-style: italic;
+    }
+    
+    .blockquote::before {
+        content: '"';
+        color: #d9d9d9;
+        width: 100px;
+        opacity: 1;
+        font-size: 100px;
+        line-height: .85;
+    }
+    
+    .figure {
+        width: 100%;
+        border-radius: 1%;
     }
     /* --------------------end of this section--------------------------- */

@@ -37,14 +37,6 @@
     font-size: 2em;
 }
 
-.icon-expand_more:before {
-    content: "\e908";
-}
-
-.icon-heart:before {
-    content: "\f004";
-}
-
 .icon-css3:before {
     content: "\e900";
     color: #1572b6;
@@ -55,16 +47,6 @@
     margin-right: 10px;
     color: purple;
     font-weight: bolder;
-}
-
-.icon-html5:before {
-    content: "\e902";
-    color: #e34f26;
-}
-
-.icon-javascript:before {
-    content: "\e903";
-    color: #f7df1e;
 }
 
 .icon-rocket::after {
@@ -79,8 +61,4 @@
     color: #1572b6;
     font-weight: bolder;
     margin-right: 10px;
-}
-
-.container {
-    display: flex;
 }

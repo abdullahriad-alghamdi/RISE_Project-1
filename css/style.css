@@ -3,8 +3,6 @@
            Table of content
         --------------------
         1- Global Style
-        2- HomePage Grid layout Container
-
               2.1- content-Sections
                  2.1.1- Main-content(postcard)
                  2.1.2- Side-bar (newsletter)
@@ -28,22 +26,22 @@
 /*--  1- Global Style --*/
 
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url("/Icons/icons.css");
 @import url("Header-Footer.css");
+@import url("Home-Page-Layout.css");
+@import url("MediaQuery.css");
 body {
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
 }
 
 *,
 *::before,
 *::after {
-    font-size: 4;
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 1;
 }
 
 :root {
@@ -56,48 +54,12 @@ body {
     --gray: gray;
 }
 
-
-/* --------------------end of this section--------------------------- */
-
-
-/* ---------- 2- HomePage Grid layout ---------- */
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 3.6fr 2fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "header" "main-content" "newsletter" "footer";
-    height: 16px;
+a {
+    color: var(--blue);
 }
 
-.header {
-    grid-area: header;
-}
-
-.main-content {
-    grid-area: main-content;
-}
-
-.footer {
-    grid-area: footer;
-}
-
-.newsletter {
-    grid-area: newsletter;
-}
-
-@media (min-width:769px) {
-    body {
-        font-size: 20px;
-    }
-}
-
-@media (min-width:1025px) {
-    body {
-        font-size: 30px;
-    }
+a:hover {
+    color: var(--black);
 }
 
 
@@ -200,18 +162,6 @@ input[type=submit] {
 
 input[type=submit]:hover {
     opacity: 0.9;
-}
-
-.design-img {
-    display: flex;
-    flex-wrap: wrap;
-    border: 3px solid black;
-    gap: 1rem;
-}
-
-.design-img img {
-    width: 200px;
-    height: auto;
 }
 
 

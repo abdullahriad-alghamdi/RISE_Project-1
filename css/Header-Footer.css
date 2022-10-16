@@ -116,7 +116,6 @@ nav h1 {
     .mnue-list li:hover {
         width: 100%;
         color: var(--black);
-        border-radius: 0;
         border: 0;
     }
     .mnue-list li a:hover {
