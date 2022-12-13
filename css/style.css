@@ -86,7 +86,8 @@ a:hover {
     display: flex;
     flex-flow: row wrap;
     padding: 10px;
-    width: 80%;
+    max-width: 60%;
+    min-width: 50%;
     font-family: 'Patua One', cursive;
     background-color: rgb(228, 228, 227);
     gap: 2rem;
@@ -94,7 +95,9 @@ a:hover {
 
 .postcard-img {
     width: 100%;
+    margin: 0 auto;
     height: auto;
+    border: 2px solid var(--gray);
 }
 
 .post-card-info {
@@ -126,30 +129,41 @@ a:hover {
 /* -- 2.1.2 Side-bar (newsletter form)-- */
 
 form {
-    font-family: Arial;
-    margin: 30px auto 30px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Patua One', cursive;
+    background-color: var(--transparentBlack);
 }
 
 .newsletter-container {
     padding: 20px;
-    background-color: var(--transparentBlack);
-}
-
-.news-background {
-    background-color: var(--white);
 }
 
 input[type=text],
 input[type=submit] {
     width: 100%;
     padding: 10px;
-    margin: 8px 0;
-    display: inline;
-    box-sizing: border-box;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Patua One', cursive;
+    margin: 5px 0;
 }
 
 input[type=checkbox] {
-    margin-top: 15px;
+    /* i wiil style this checkbox */
+    width: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+    margin: 50px 0;
+    /* to make it bigger  */
+    transform: scale(1.7);
 }
 
 input[type=submit] {
